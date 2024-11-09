@@ -1,0 +1,33 @@
+#!/bin/bash
+
+PACKAGES="git picom i3 polybar neovim golang"
+
+# Prompt user to select their distribution
+echo "Please select your Linux distribution:"
+echo "1) Debian/Ubuntu (apt)"
+echo "2) Arch (pacman)"
+echo "3) Exit"
+read -rp "Enter the number of your choice: " option
+
+case $option in
+    1)
+        DISTRO="Debian/Ubuntu"
+        INSTALL_CMD="sudo apt install -y"
+        ;;
+    2)
+        DISTRO="Arch"
+        INSTALL_CMD="sudo pacman -S --noconfirm"
+        ;;
+    3)
+        echo "Exiting."
+        exit 0
+        ;;
+    *)
+        echo "Invalid option. Exiting."
+        exit 1
+        ;;
+esac
+
+echo "Installing dependencies..."
+$INSTALL_CMD $PACKAGES
+

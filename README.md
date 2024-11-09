@@ -4,7 +4,7 @@
 
 ## Setup
 ```bash
-yadm clone https://github.com/danielhejduk/dotfiles.git; ~/.local/bin/daniel-dependencies
+yadm clone https://github.com/danielhejduk/dotfiles.git; ~/install-dependencies
 ```
 
 ## Credits

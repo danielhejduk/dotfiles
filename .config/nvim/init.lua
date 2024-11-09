@@ -1,5 +1,7 @@
 require("packer")
 
+require("plugins")
+
 vim.cmd("colorscheme kanagawa")
 
 vim.opt.relativenumber = true

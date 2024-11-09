@@ -115,4 +115,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=$PATH:$HOME/bin
+. "$HOME/.cargo/env"
+export PATH=$PATH:~/.local/bin
